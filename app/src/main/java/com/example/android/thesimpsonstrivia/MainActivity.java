@@ -1,14 +1,12 @@
 package com.example.android.thesimpsonstrivia;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method is called when the check score button is clicked.
      */
-    public void submitOrder(View view) {
+    public void submitAnswer(View view) {
 
         /**
          * This checks the users question 1 answer and adds a points if correct
@@ -59,17 +57,18 @@ public class MainActivity extends AppCompatActivity {
 
         if (correctThree) {
             quizScore = quizScore + 1;
+        }
 
         /**
          * This checks the users question 4 answer and adds a points if correct
          */
 
-            EditText question_4_answer = (EditText) findViewById(R.id.question_4_answer);
-            String correctFour = question_4_answer.getText().toString();
+        EditText question_4_answer = (EditText) findViewById(R.id.question_4_answer);
+        String correctFour = question_4_answer.getText().toString();
 
-            if (correctFour == "Annoyed grunt") {
-                quizScore = quizScore + 1;
-            }
+        if (correctFour == "Annoyed grunt") {
+            quizScore = quizScore + 1;
+        }
 
 
         /**
@@ -83,18 +82,23 @@ public class MainActivity extends AppCompatActivity {
             quizScore = quizScore + 1;
         }
 
+        /**
+         * This displays the users score.
+         */
 
-        int price = calculatePrice(hasWhip, hasChocolate);
-        String priceMessage = createOrderSummary(orderName, price, hasWhip, hasChocolate);
-
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
-        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject) + orderName);
-        intent.putExtra(Intent.EXTRA_TEXT, priceMessage);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
+        String scoreMessage = "You got " + quizScore + " of 5 correct!\n";
+        if (quizScore == 5) {
+            Toast.makeText(this, scoreMessage + R.string.score_message_5, Toast.LENGTH_LONG).show();
+        } else if (quizScore == 4) {
+            Toast.makeText(this, scoreMessage + R.string.score_message_4, Toast.LENGTH_LONG).show();
+        } else if (quizScore == 3) {
+            Toast.makeText(this, scoreMessage + R.string.score_message_3, Toast.LENGTH_LONG).show();
+        } else if (quizScore == 2) {
+            Toast.makeText(this, scoreMessage + R.string.score_message_2, Toast.LENGTH_LONG).show();
+        } else if (quizScore == 1) {
+            Toast.makeText(this, scoreMessage + R.string.score_message_1, Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, scoreMessage + R.string.score_message_0, Toast.LENGTH_LONG).show();
         }
-
     }
-
 }

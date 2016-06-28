@@ -1,6 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">The Simpsons Trivia</string>
-    <string name="score_message_5">Whoohoo! You're a Super Simpsons Nerd!</string>
     <string name="score_message_4">Ay caramba! You sure know The Simpsons!</string>
     <string name="score_message_3">Don\'t have a cow, man! You did pretty well, these were tough!</string>
     <string name="score_message_2">Meh... That wasn\'t very good. You should\'ve cheated.</string>
