@@ -6,48 +6,61 @@
     tools:context="com.example.android.thesimpsonstrivia.MainActivity">
 
     <LinearLayout
+        android:tag="question"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/simpsons_app_banner" />
+
         <!-- Question 1-->
         <LinearLayout
+            android:tag="question"
             android:id="@+id/question_1"
+            style="@style/questionLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/question_1_header"
+                style="@style/questionHeaders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Question 1." />
 
             <TextView
                 android:id="@+id/question_1_text"
+                style="@style/questionText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="What is Comic-Book-Guy's real name?" />
 
             <RadioGroup
+                android:tag="radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A. Matt Groening"/>
+                    android:text="A. Matt Groening" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="B. Les Hapablap"/>
+                    android:text="B. Les Hapablap" />
 
                 <RadioButton
                     android:id="@+id/question_1_answer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="C. Jeff Albertson"/>
+                    android:text="C. Jeff Albertson" />
 
             </RadioGroup>
 
@@ -55,64 +68,76 @@
 
         <!-- Question 2-->
         <LinearLayout
+            android:tag="question"
             android:id="@+id/question_2"
+            style="@style/questionLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/question_2_header"
+                style="@style/questionHeaders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Question 2" />
 
             <TextView
                 android:id="@+id/question_2_text"
+                style="@style/questionText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Which of these Springfieldianites are dead permanently?" />
 
             <CheckBox
+                android:tag="check"
                 android:id="@+id/question_2_wrong_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="A. Mr. Burns"/>
+                android:text="A. Mr. Burns" />
 
             <CheckBox
+                android:tag="check"
                 android:id="@+id/question_2_answer_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="B. Maude Flanders"/>
+                android:text="B. Maude Flanders" />
 
             <CheckBox
+                android:tag="check"
                 android:id="@+id/question_2_wrong_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="C. Hanz Moleman"/>
+                android:text="C. Hanz Moleman" />
 
             <CheckBox
+                android:tag="check"
                 android:id="@+id/question_2_answer_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="D. Frank Grimes"/>
+                android:text="D. Frank Grimes" />
 
         </LinearLayout>
 
         <!-- Question 3-->
         <LinearLayout
+            android:tag="question"
             android:id="@+id/question_3"
+            style="@style/questionLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/question_3_header"
+                style="@style/questionHeaders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Question 3" />
 
             <TextView
                 android:id="@+id/question_3_text"
+                style="@style/questionText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="What is this character's name?" />
@@ -121,33 +146,35 @@
                 android:id="@+id/question_3_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
                 android:scaleType="centerInside"
-                android:src="@drawable/hapablap"/>
+                android:src="@drawable/hapablap" />
 
             <RadioGroup
+                android:tag="radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A. Ned Flanders"/>
+                    android:text="A. Ned Flanders" />
 
                 <RadioButton
                     android:id="@+id/question_3_answer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="B. Leslie Hapablap"/>
+                    android:text="B. Leslie Hapablap" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="C. Bleeding Gums Murphy"/>
+                    android:text="C. Bleeding Gums Murphy" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="D. Declan Desmond"/>
+                    android:text="D. Declan Desmond" />
 
             </RadioGroup>
 
@@ -155,88 +182,119 @@
 
         <!-- Question 4-->
         <LinearLayout
+            android:tag="question"
             android:id="@+id/question_4"
+            style="@style/questionLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/question_4_header"
+                style="@style/questionHeaders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Question 4" />
 
             <TextView
                 android:id="@+id/question_4_text"
+                style="@style/questionText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="How do the writers write Homer's famous catch phrase &quot;D'oh&quot; in their scripts?" />
 
             <EditText
+                android:tag="edit-text"
                 android:id="@+id/question_4_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textCapSentences"
-                android:hint="Type Answer Here"/>
+                android:hint="Type Answer Here"
+                android:inputType="textCapSentences" />
 
         </LinearLayout>
 
         <!-- Question 5-->
         <LinearLayout
+            android:tag="question"
             android:id="@+id/question_5"
+            style="@style/questionLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/question_5_header"
+                style="@style/questionHeaders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Question 5" />
 
             <TextView
                 android:id="@+id/question_5_text"
+                style="@style/questionText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="In the season 4 espisode, &quot;Mr. Plow&quot;, Homer test-drives a car at Crazy Vaclav's Place of Automobiles.
-What country is the car from?" />
+                android:text="In the season 4 espisode, &quot;Mr. Plow&quot;, Homer test-drives a car at Crazy Vaclav's Place of Automobiles. What country is the car from?" />
 
             <RadioGroup
+                android:tag="radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A. Albania"/>
+                    android:text="A. Albania" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="B. Ukraine"/>
+                    android:text="B. Ukraine" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="C. Turkmenistan"/>
+                    android:text="C. Turkmenistan" />
 
                 <RadioButton
                     android:id="@+id/question_5_answer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="D. It no longer exists"/>
+                    android:text="D. It no longer exists" />
 
             </RadioGroup>
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/submit_answers"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            style="@style/questionLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Check Score"
-            android:gravity="center"
-            android:onClick="submitAnswer"/>
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/submit_answers"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_custom"
+                android:gravity="center"
+                android:onClick="submitAnswer"
+                android:text="Check Score" />
+
+            <Button
+                android:id="@+id/reset_quiz"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_custom"
+                android:gravity="center"
+                android:onClick="reset_quiz"
+                android:text="Reset Quiz" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

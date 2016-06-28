@@ -1,11 +1,25 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">#6BDEF7</item>
+        <item name="colorPrimaryDark">#4294E7</item>
+        <item name="colorAccent">#F74D8B</item>
+        <item name="android:background">#FFD642</item>
     </style>
 
+    <style name="questionLayout">
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="questionHeaders">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="questionText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
