@@ -61,13 +61,16 @@ public class MainActivity extends AppCompatActivity {
             quizScore = quizScore + 1;
 
         /**
-         * This checks the users question 4 answer
+         * This checks the users question 4 answer and adds a points if correct
          */
 
-        RadioButton question_1_answer = (RadioButton) findViewById(R.id.question_1_answer);
-        boolean correctOne = question_1_answer.isChecke
+            EditText question_4_answer = (EditText) findViewById(R.id.question_4_answer);
+            String correctFour = question_4_answer.getText().toString();
 
-        d();
+            if (correctFour == "Annoyed grunt") {
+                quizScore = quizScore + 1;
+            }
+
 
         /**
          * This checks the users question 5 answer

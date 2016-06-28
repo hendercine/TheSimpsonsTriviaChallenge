@@ -171,6 +171,7 @@
                 android:text="How do the writers write Homer's famous catch phrase &quot;D'oh&quot; in their scripts?" />
 
             <EditText
+                android:id="@+id/question_4_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textCapSentences"
