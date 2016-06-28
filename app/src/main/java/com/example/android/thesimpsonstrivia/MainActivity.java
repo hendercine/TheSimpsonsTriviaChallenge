@@ -19,24 +19,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when the check score button is clicked.
+     * This checks the users question 2 answer and adds a points if correct
      */
-    public void submitAnswer(View view) {
 
-        /**
-         * This checks the users question 1 answer and adds a points if correct
-         */
-
-        RadioButton question_1_answer = (RadioButton) findViewById(R.id.question_1_answer);
-        boolean correctOne = question_1_answer.isChecked();
-
-        if (correctOne) {
-            quizScore = quizScore + 1;
-        }
-
-        /**
-         * This checks the users question 2 answer and adds a points if correct
-         */
+    public void checkQuestionTwo() {
 
         CheckBox question_2_wrong_1 = (CheckBox) findViewById(R.id.question_2_wrong_1);
         boolean wrongTwoOne = question_2_wrong_1.isChecked();
@@ -56,13 +42,34 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        if (correctTwoOne) {
+        if (correctTwoOne && correctTwoTwo) {
+            quizScore = quizScore + 1;
+        } else {
+            return;
+        }
+    }
+
+    /**
+     * This method is called when the check score button is clicked.
+     */
+    public void submitAnswer(View view) {
+
+        /**
+         * This checks the users question 1 answer and adds a points if correct
+         */
+
+        RadioButton question_1_answer = (RadioButton) findViewById(R.id.question_1_answer);
+        boolean correctOne = question_1_answer.isChecked();
+
+        if (correctOne) {
             quizScore = quizScore + 1;
         }
 
-        if (correctTwoOne) {
-            quizScore = quizScore + 1;
-        }
+        /**
+         * This adds the results of question 2
+         */
+
+        checkQuestionTwo();
 
         /**
          * This checks the users question 3 answer and adds a points if correct
