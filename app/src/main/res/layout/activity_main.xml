@@ -73,6 +73,7 @@
                 android:text="Which of these Springfieldianites are dead permanently?" />
 
             <CheckBox
+                android:id="@+id/question_2_wrong_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="A. Mr. Burns"/>
@@ -84,6 +85,7 @@
                 android:text="B. Maude Flanders"/>
 
             <CheckBox
+                android:id="@+id/question_2_wrong_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="C. Hanz Moleman"/>
@@ -233,7 +235,8 @@ What country is the car from?" />
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Check Score"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:onClick="submitAnswer"/>
 
     </LinearLayout>
 

@@ -38,13 +38,29 @@ public class MainActivity extends AppCompatActivity {
          * This checks the users question 2 answer and adds a points if correct
          */
 
+        CheckBox question_2_wrong_1 = (CheckBox) findViewById(R.id.question_2_wrong_1);
+        boolean wrongTwoOne = question_2_wrong_1.isChecked();
+
+        CheckBox question_2_wrong_2 = (CheckBox) findViewById(R.id.question_2_wrong_2);
+        boolean wrongTwoTwo = question_2_wrong_2.isChecked();
+
         CheckBox question_2_answer_1 = (CheckBox) findViewById(R.id.question_2_answer_1);
         boolean correctTwoOne = question_2_answer_1.isChecked();
 
         CheckBox question_2_answer_2 = (CheckBox) findViewById(R.id.question_2_answer_2);
         boolean correctTwoTwo = question_2_answer_2.isChecked();
 
-        if (correctTwoOne) while (correctTwoTwo) {
+        if (wrongTwoOne) {
+            return;
+        } else if (wrongTwoTwo) {
+            return;
+        }
+
+        if (correctTwoOne) {
+            quizScore = quizScore + 1;
+        }
+
+        if (correctTwoOne) {
             quizScore = quizScore + 1;
         }
 
@@ -70,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
             quizScore = quizScore + 1;
         }
 
-
         /**
          * This checks the users question 5 answer and adds a points if correct
          */
@@ -86,9 +101,11 @@ public class MainActivity extends AppCompatActivity {
          * This displays the users score.
          */
 
-        String scoreMessage = "You got " + quizScore + " of 5 correct!\n";
-        if (quizScore == 5) {
+        String scoreMessage = "You got " + quizScore + " of 6 correct!\n";
+        if (quizScore == 6) {
             Toast.makeText(this, scoreMessage + R.string.score_message_5, Toast.LENGTH_LONG).show();
+        } else if (quizScore == 5) {
+            Toast.makeText(this, scoreMessage + R.string.score_message_4, Toast.LENGTH_LONG).show();
         } else if (quizScore == 4) {
             Toast.makeText(this, scoreMessage + R.string.score_message_4, Toast.LENGTH_LONG).show();
         } else if (quizScore == 3) {
@@ -100,5 +117,8 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, scoreMessage + R.string.score_message_0, Toast.LENGTH_LONG).show();
         }
+
+        quizScore = 0;
     }
+
 }
