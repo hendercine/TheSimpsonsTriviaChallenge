@@ -168,29 +168,13 @@
                 android:id="@+id/question_4_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="What is Comic-Book-Guy's real name?" />
+                android:text="How do the writers write Homer's famous catch phrase &quot;D'oh&quot; in their scripts?" />
 
-            <RadioGroup
+            <EditText
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="A. Matt Groening"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="B. Les Hapablap"/>
-
-                <RadioButton
-                    android:id="@+id/question_4_answer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="C. Jeff Albertson"/>
-
-            </RadioGroup>
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:hint="Type Answer Here"/>
 
         </LinearLayout>
 
@@ -211,7 +195,8 @@
                 android:id="@+id/question_5_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="What is Comic-Book-Guy's real name?" />
+                android:text="In the season 4 espisode, &quot;Mr. Plow&quot;, Homer test-drives a car at Crazy Vaclav's Place of Automobiles.
+What country is the car from?" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -220,18 +205,23 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A. Matt Groening"/>
+                    android:text="A. Albania"/>
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="B. Les Hapablap"/>
+                    android:text="B. Ukraine"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. Turkmenistan"/>
 
                 <RadioButton
                     android:id="@+id/question_5_answer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="C. Jeff Albertson"/>
+                    android:text="D. It no longer exists"/>
 
             </RadioGroup>
 
