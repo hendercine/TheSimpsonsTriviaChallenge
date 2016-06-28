@@ -73,11 +73,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         /**
-         * This checks the users question 5 answer
+         * This checks the users question 5 answer and adds a points if correct
          */
 
-        RadioButton question_1_answer = (RadioButton) findViewById(R.id.question_1_answer);
-        boolean correctOne = question_1_answer.isChecked.getText();
+        RadioButton question_5_answer = (RadioButton) findViewById(R.id.question_5_answer);
+        boolean correctFive = question_5_answer.isChecked();
+
+        if (correctFive) {
+            quizScore = quizScore + 1;
+        }
 
 
         int price = calculatePrice(hasWhip, hasChocolate);
