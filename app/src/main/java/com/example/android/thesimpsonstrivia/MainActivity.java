@@ -51,14 +51,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         /**
-         * This checks the users question 3 answer
+         * This checks the users question 3 answer and adds a points if correct
          */
 
-        RadioButton quest3on_1_answer = (RadioButton) findViewById(R.id.quest3on_1_answer);
-        boolean corThreetOne = quest3on_1_answer.isChecke
+        RadioButton question_3_answer = (RadioButton) findViewById(R.id.question_3_answer);
+        boolean correctThree = question_3_answer.isChecked();
 
         if (correctThree) {
-            quizScore = quizScore + 1;d();
+            quizScore = quizScore + 1;
 
         /**
          * This checks the users question 4 answer
