@@ -5,4 +5,5 @@
     <string name="score_message_2">Meh... That wasn\'t very good. You should\'ve cheated.</string>
     <string name="score_message_1">D\'oh! You need to watch more TV...</string>
     <string name="score_message_0">Worst episode ever! Time to clamp your eyelids open and strap you to a chair!</string>
+    <string name="question_4_correct">Annoyed grunt</string>
 </resources>

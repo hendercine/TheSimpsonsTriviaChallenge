@@ -44,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
         if (correctTwoOne && correctTwoTwo) {
             quizScore = quizScore + 1;
-        } else {
-            return;
         }
     }
 
@@ -89,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         EditText question_4_answer = (EditText) findViewById(R.id.question_4_answer);
         String correctFour = question_4_answer.getText().toString();
 
-        if (correctFour == "Annoyed grunt") {
+        if (correctFour.equalsIgnoreCase("annoyed grunt")) {
             quizScore = quizScore + 1;
         }
 
@@ -108,21 +106,19 @@ public class MainActivity extends AppCompatActivity {
          * This displays the users score.
          */
 
-        String scoreMessage = "You got " + quizScore + " of 6 correct!\n";
-        if (quizScore == 6) {
-            Toast.makeText(this, scoreMessage + R.string.score_message_5, Toast.LENGTH_LONG).show();
-        } else if (quizScore == 5) {
-            Toast.makeText(this, scoreMessage + R.string.score_message_4, Toast.LENGTH_LONG).show();
+        String scoreMessage = "You got " + quizScore + " of 5 correct!\n";
+        if (quizScore == 5) {
+            Toast.makeText(this, scoreMessage + getText(R.string.score_message_5), Toast.LENGTH_LONG).show();
         } else if (quizScore == 4) {
-            Toast.makeText(this, scoreMessage + R.string.score_message_4, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, scoreMessage + getText(R.string.score_message_4), Toast.LENGTH_LONG).show();
         } else if (quizScore == 3) {
-            Toast.makeText(this, scoreMessage + R.string.score_message_3, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, scoreMessage + getText(R.string.score_message_3), Toast.LENGTH_LONG).show();
         } else if (quizScore == 2) {
-            Toast.makeText(this, scoreMessage + R.string.score_message_2, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, scoreMessage + getText(R.string.score_message_2), Toast.LENGTH_LONG).show();
         } else if (quizScore == 1) {
-            Toast.makeText(this, scoreMessage + R.string.score_message_1, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, scoreMessage + getText(R.string.score_message_1), Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, scoreMessage + R.string.score_message_0, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, scoreMessage + getText(R.string.score_message_0), Toast.LENGTH_LONG).show();
         }
 
         quizScore = 0;
