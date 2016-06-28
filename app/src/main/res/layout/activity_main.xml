@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.thesimpsonstrivia.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Question 1-->
+        <LinearLayout
+            android:id="@+id/question_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/question_1_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question 1." />
+
+            <TextView
+                android:id="@+id/question_1_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is Comic-Book-Guy's real name?" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. Matt Groening"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. Les Hapablap"/>
+
+                <RadioButton
+                    android:id="@+id/question_1_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. Jeff Albertson"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!-- Question 2-->
+        <LinearLayout
+            android:id="@+id/question_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/question_2_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question 2" />
+
+            <TextView
+                android:id="@+id/question_2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Which of these Springfieldianites are dead permanently?" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A. Mr. Burns"/>
+
+            <CheckBox
+                android:id="@+id/question_2_answer_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B. Maude Flanders"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C. Hanz Moleman"/>
+
+            <CheckBox
+                android:id="@+id/question_2_answer_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D. Frank Grimes"/>
+
+        </LinearLayout>
+
+        <!-- Question 3-->
+        <LinearLayout
+            android:id="@+id/question_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/question_3_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question 3" />
+
+            <TextView
+                android:id="@+id/question_3_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is this character's name?" />
+
+            <ImageView
+                android:id="@+id/question_3_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/hapablap"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. Ned Flanders"/>
+
+                <RadioButton
+                    android:id="@+id/question_3_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. Leslie Hapablap"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. Bleeding Gums Murphy"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D. Declan Desmond"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!-- Question 4-->
+        <LinearLayout
+            android:id="@+id/question_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/question_4_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question 4" />
+
+            <TextView
+                android:id="@+id/question_4_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is Comic-Book-Guy's real name?" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. Matt Groening"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. Les Hapablap"/>
+
+                <RadioButton
+                    android:id="@+id/question_4_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. Jeff Albertson"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!-- Question 5-->
+        <LinearLayout
+            android:id="@+id/question_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/question_5_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question 5" />
+
+            <TextView
+                android:id="@+id/question_5_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is Comic-Book-Guy's real name?" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. Matt Groening"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. Les Hapablap"/>
+
+                <RadioButton
+                    android:id="@+id/question_5_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. Jeff Albertson"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit_answers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Score"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</ScrollView>
