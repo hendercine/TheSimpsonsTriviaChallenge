@@ -23,12 +23,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button submitButton = (Button) findViewById(R.id.submit_answers);
-        submitButton.setOnClickListener((View.OnClickListener) this);
+    }
 
-        Button resetButton = (Button) findViewById(R.id.reset_quiz);
-        resetButton.setEnabled(false);
-        resetButton.setOnClickListener((View.OnClickListener) this);
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.submit_answers:
+                submitButton.setEnabled(false);
+                resetButton.setEnabled(true); // add this
+                break;
+
+            case R.id.reset_quiz:
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
+                break;
+
+            default:
+                break;
+        }
     }
 
     /**
@@ -92,17 +104,17 @@ public class MainActivity extends AppCompatActivity {
 
         String scoreMessage = "You got " + quizScore + " of 5 correct!\n";
         if (quizScore == 5) {
-            Toast.makeText(this, scoreMessage + getText(R.string.score_message_5), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), scoreMessage + getText(R.string.score_message_5), Toast.LENGTH_LONG).show();
         } else if (quizScore == 4) {
-            Toast.makeText(this, scoreMessage + getText(R.string.score_message_4), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), scoreMessage + getText(R.string.score_message_4), Toast.LENGTH_LONG).show();
         } else if (quizScore == 3) {
-            Toast.makeText(this, scoreMessage + getText(R.string.score_message_3), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), scoreMessage + getText(R.string.score_message_3), Toast.LENGTH_LONG).show();
         } else if (quizScore == 2) {
-            Toast.makeText(this, scoreMessage + getText(R.string.score_message_2), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), scoreMessage + getText(R.string.score_message_2), Toast.LENGTH_LONG).show();
         } else if (quizScore == 1) {
-            Toast.makeText(this, scoreMessage + getText(R.string.score_message_1), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), scoreMessage + getText(R.string.score_message_1), Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, scoreMessage + getText(R.string.score_message_0), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), scoreMessage + getText(R.string.score_message_0), Toast.LENGTH_LONG).show();
         }
 
         quizScore = 0;
@@ -137,89 +149,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.submit_answers:
-                submitButton.setEnabled(false);
-                resetButton.setEnabled(true); // add this
-                break;
-
-
-            case R.id.reset_quiz:
-                Intent intent = getIntent();
-                finish();
-                startActivity(intent);
-                break;
-
-            default:
-                break;
-        }
-    }
 }
 
-//    /**
-//     * This looks for each view that can be reset
-//     */
-//
-//    private static ArrayList<View> findViewsToReset(ViewGroup rootView, String tag){
-//        ArrayList<View> views = new ArrayList<View>();
-//        final int childCount = rootView.getChildCount();
-//        for (int i = 0; i < childCount; i++) {
-//            final View child = rootView.getChildAt(i);
-//            if (child instanceof ViewGroup) {
-//                views.addAll(findViewsToReset((ViewGroup) child, tag));
-//            }
-//
-//            final Object tagObj = child.getTag();
-//            if (tagObj != null && tagObj.equals(tag)) {
-//                views.add(child);
-//            }
-//
-//        }
-//
-//        return views;
-//    }
-//
-//    public void setResetQuiz(ArrayList<View> resetQuiz) {
-//        ArrayList<View> form_elements = findViewsToReset(LinearLayout this, String "question");
-//        for (View element : form_elements) {
-//            if (element instanceof EditText) {
-//                ((EditText) element).setText("");
-//            } else if (element instanceof CheckBox) {
-//                ((CheckBox) element).setChecked(false);
-//            } else if (element instanceof RadioGroup) {
-//                ((RadioGroup) element).clearCheck();
-//            }
-//        }
-//    }
-    //    public List findViewsToReset() {
-//
-//        LinearLayout parentViews = (LinearLayout)findViewWithTag("question");
-//        /**
-//         * This looks for CheckBoxes that can be reset
-//         */
-//
-//        CheckBox findChecks = (CheckBox)findViewWithTag(View, "check");
-//
-//        /**
-//         * This looks for RadioGroups that can be reset
-//         */
-//
-//        RadioGroup findRadios = (RadioGroup) view.findViewWithTag("radio");
-//
-//        /**
-//         * This looks for EditText views that can be reset
-//         */
-//
-//        EditText findEditTexts = (EditText) view.findViewWithTag("edit-text");
-//
-//    }
-//
-    /**
-     * This method is called when the reset score button is clicked.
-     */
-
-//
 
 
 

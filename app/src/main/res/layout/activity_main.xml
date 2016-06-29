@@ -54,7 +54,7 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="B. Les Hapablap" />
+                    android:text="B. Lionel Hutz" />
 
                 <RadioButton
                     android:id="@+id/question_1_answer"
@@ -291,7 +291,7 @@
                 android:layout_margin="8dp"
                 android:background="@drawable/button_custom"
                 android:gravity="center"
-                android:onClick="reset_quiz"
+                android:onClick="onClick"
                 android:text="Reset Quiz" />
 
         </LinearLayout>
